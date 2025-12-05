@@ -87,7 +87,7 @@ curl 'http://localhost:6086/check?url=https://www.imgurl.org/static/images/logo.
 
 * `code`：状态码，200视为成功，其余状态码视为失败
 * `msg`：消息提示，错误时会显示具体原因
-* `data.sfw`：安全系数`[0-1]`，值越高表示图片越安全
+* `data.sfw`：安全系数`[0.0-1.0]`，值越高表示图片越安全
 * `data.nsfw`：风险系数 `[0.0-1.0]`，值越高表示风险越高
 * `is_nsfw`：当`nsfw>=0.8`时判定为色情图像，也可以自行根据`nsfw`分险系数判断
 
