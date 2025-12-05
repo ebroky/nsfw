@@ -1,0 +1,11 @@
+services:
+  nsfw:
+    container_name: nsfw
+    image: helloz/nsfw
+    ports:
+      - "6086:6086"
+    # 环境变量
+    environment:
+      - TOKEN=your_token_here
+      - WORKERS=1
+    restart: always
