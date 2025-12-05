@@ -1,5 +1,5 @@
 #!/bin/bash
-
+ls -al
 # 工作目录
 WORKDIR="/opt/nsfw"
 # 安装依赖
