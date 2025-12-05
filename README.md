@@ -61,13 +61,13 @@ services:
 未启用鉴权：
 
 ```
-curl 'http://localhost:6086/check?url=https://s3.bmp.ovh/imgs/2025/09/13/30be084e818e9bbf.jpg'
+curl 'http://localhost:6086/check?url=https://www.imgurl.org/static/images/logo.png'
 ```
 
 启用鉴权：
 
 ```
-curl 'http://localhost:6086/check?url=https://s3.bmp.ovh/imgs/2025/09/13/30be084e818e9bbf.jpg' \
+curl 'http://localhost:6086/check?url=https://www.imgurl.org/static/images/logo.png' \
 --header 'Authorization: Bearer your_token_here'
 ```
 
