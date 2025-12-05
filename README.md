@@ -1,3 +1,5 @@
+中文说明 | [English](README_en.md)
+
 # helloxz/nsfw
 
 ## 关于
