@@ -91,6 +91,12 @@ curl 'http://localhost:6086/check?url=https://www.imgurl.org/static/images/logo.
 * `data.nsfw`：风险系数 `[0.0-1.0]`，值越高表示风险越高
 * `is_nsfw`：当`nsfw>=0.8`时判定为色情图像，也可以自行根据`nsfw`分险系数判断
 
+### 测试API
+
+* 测试地址：[https://nsfw.demo.mba/check?url=https://www.imgurl.org/static/images/logo.png](https://nsfw.demo.mba/check?url=https://www.imgurl.org/static/images/logo.png)
+
+> 测试地址存在限流设置，仅供测试使用，请勿用于其它用途！
+
 ## 注意
 
 此项目仅供学习和测试使用，请勿用于商业用途和生产环境，相关风险和责任需要您自行承担！
