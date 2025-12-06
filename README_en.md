@@ -2,6 +2,8 @@
 
 # helloxz/nsfw
 
+![f28a9685fa1ffeff.png](https://img.rss.ink/imgs/2025/12/06/f28a9685fa1ffeff.png)
+
 ## About
 
 This project is based on [AdamCodd/vit-base-nsfw-detector/](https://huggingface.co/AdamCodd/vit-base-nsfw-detector/) and exposes an HTTP API for NSFW image detection. It is suitable for CPU-only inference and provides a lightweight implementation.

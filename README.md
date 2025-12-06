@@ -2,6 +2,8 @@
 
 # helloxz/nsfw
 
+![3953634eea02b6e7.png](https://img.rss.ink/imgs/2025/12/06/3953634eea02b6e7.png)
+
 ## 关于
 
 此项目基于[AdamCodd/vit-base-nsfw-detector/](https://huggingface.co/AdamCodd/vit-base-nsfw-detector/) 实现，并封装为HTTP API调用，可用于识别网络色情图像（nsfw识别），适合纯CPU机器推理，轻量级实现方案。
