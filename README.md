@@ -88,6 +88,8 @@ curl --location --request POST 'http://localhost:6086/api/url_check' \
 }'
 ```
 
+> 如果图片URL中含有特殊字符或参数，建议使用POST请求方式。
+
 ### 通过上传图片文件进行检测
 
 ```
