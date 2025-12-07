@@ -81,7 +81,7 @@ curl 'http://localhost:6086/api/url_check?url=https://www.imgurl.org/static/imag
 POST请求方式：
 
 ```
-curl --location --request POST 'http://192.168.50.20:6086/api/url_check' \
+curl --location --request POST 'http://localhost:6086/api/url_check' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "url":"https://www.imgurl.org/static/images/logo.png"
