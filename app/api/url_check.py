@@ -12,6 +12,7 @@ ALLOWED_MIME = {
     "image/png",
     "image/bmp",
     "image/webp",
+    "image/gif",
 }
 # 最大大小 10MB
 MAX_SIZE = 10 * 1024 * 1024
@@ -91,6 +92,50 @@ def _infer(image: Image.Image):
     is_nsfw = nsfw_raw > 0.8
     return {"sfw": sfw_prob, "nsfw": nsfw_prob, "is_nsfw": is_nsfw}, None
 
+def _extract_middle_frame(image: Image.Image) -> Image.Image:
+    # 如果是 GIF 且是动图，则取中间帧；否则返回原始图像
+    orig_fmt = getattr(image, "format", None)
+    try:
+        if getattr(image, "format", None) == "GIF" and getattr(image, "is_animated", False):
+            frames = getattr(image, "n_frames", 1)
+            mid = max(0, frames // 2)
+            try:
+                image.seek(mid)
+            except Exception:
+                # 回退到第一帧
+                try:
+                    image.seek(0)
+                except Exception:
+                    pass
+            # GIF帧通常是调色板模式，转为RGB
+            out = image.convert("RGB")
+            # 标注原始格式，避免后续 format 丢失
+            try:
+                setattr(out, "_orig_format", orig_fmt)
+            except Exception:
+                pass
+            try:
+                info = dict(getattr(out, "info", {}))
+                info["orig_format"] = orig_fmt
+                out.info = info
+            except Exception:
+                pass
+            return out
+    except Exception:
+        pass
+    # 非GIF或无需处理时，也附带原始格式
+    try:
+        setattr(image, "_orig_format", orig_fmt)
+    except Exception:
+        pass
+    try:
+        info = dict(getattr(image, "info", {}))
+        info["orig_format"] = orig_fmt
+        image.info = info
+    except Exception:
+        pass
+    return image
+
 class UrlCheckHandler:
     async def check(self, url: str):
         # 1. URL合法性校验
@@ -119,7 +164,7 @@ class UrlCheckHandler:
 
                 # MIME校验
                 if content_type not in ALLOWED_MIME:
-                    return show_json(-1000, f"Unsupported file type: {content_type or 'unknown'}, only jpg/png/bmp/webp allowed.")
+                    return show_json(-1000, f"Unsupported file type: {content_type or 'unknown'}, only jpg/png/bmp/webp/gif allowed.")
 
                 # 大小校验（头部）
                 if content_length:
@@ -151,6 +196,8 @@ class UrlCheckHandler:
         # 5. 打开并校验图像
         try:
             image = Image.open(io.BytesIO(data))
+            # GIF动图取中间帧
+            image = _extract_middle_frame(image)
         except Exception:
             return show_json(-1000, "Image parsing failed.")
 
@@ -191,7 +238,7 @@ class UrlCheckHandler:
 
                 # MIME校验
                 if content_type not in ALLOWED_MIME:
-                    return show_json(-1000, f"Unsupported file type: {content_type or 'unknown'}, only jpg/png/bmp/webp allowed.")
+                    return show_json(-1000, f"Unsupported file type: {content_type or 'unknown'}, only jpg/png/bmp/webp/gif allowed.")
 
                 # 大小校验（头部）
                 if content_length:
@@ -223,6 +270,8 @@ class UrlCheckHandler:
         # 5. 打开并校验图像
         try:
             image = Image.open(io.BytesIO(data))
+            # GIF动图取中间帧
+            image = _extract_middle_frame(image)
         except Exception:
             return show_json(-1000, "Image parsing failed.")
 
